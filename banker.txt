@@ -1,0 +1,35 @@
+1. Answer: A:6  B:7  C:12  D:12
+2. Answer: 
+    A  B  C  D
+P0: 0, 0, 0, 0
+P1: 0, 7, 5, 0
+P2: 6, 6, 2, 2
+P3: 2, 0, 0, 2
+P4: 0, 3, 2, 0
+              (need=Max-Allocation)
+3. 
+Answer:Yes
+Because we can find at least one safe sequence.
+For example: (assume we request P0 as 0,0,0,0)
+
+   A  B  C  D
+P0:2, 1, 1, 2 (WORK)
+P3:4, 4, 6, 6 (WORK)
+P4:4, 7, 9, 8 (WORK)
+P1:6, 7, 9, 8 (WORK)
+P2:6, 7, 12, 12 (WORK)
+   WORK=AVAILABLE
+         WORK=WORK+ALLOCATION
+4.
+Answer: No
+Because the system is in safe state
+5. 
+Answer: No
+
+      P2 (0,1,3,4) 
+P0:2, 0, 1, 2 
+P3:4, 3, 6, 6 
+P4:4, 6, 9, 8 
+For p1[0,7,5,0]is not enough
+
+The algorithm can not grant the request immediately, because the resources after requesting will be not enough for the further processes allocation. If the request is granted immediately, the system would have been deadlock. If the whole request is granted immediately, P1 and P2 would have become deadlock.  

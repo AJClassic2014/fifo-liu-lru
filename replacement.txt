@@ -1,0 +1,96 @@
+
+(1)For page reference:
+[3 4 6 8 7 5 1 3 1 5 6 0 4 5 2 7 4 3 2 7 0 3 3 6 3]
+
+
+XXXXXXXXXXXXXXXX   Test     XXXXXXXXXXXXXXXXXXXXX
+Current algorithm for test: fifo
+The reference string for test is:
+[3, 4, 6, 8, 7, 5, 1, 3, 1, 5, 6, 0, 4, 5, 2, 7, 4, 3, 2, 7, 0, 3, 3, 6, 3]
+XXXXXXXXXXXXXXXX   Summary  XXXXXXXXXXXXXXXXXXXXX
+current size: 3 the total number of page fault: 21
+current size: 4 the total number of page fault: 17
+current size: 5 the total number of page fault: 17
+
+XXXXXXXXXXXXXXXX   Test     XXXXXXXXXXXXXXXXXXXXX
+Current algorithm for test: lru
+The reference string for test is:
+[3, 4, 6, 8, 7, 5, 1, 3, 1, 5, 6, 0, 4, 5, 2, 7, 4, 3, 2, 7, 0, 3, 3, 6, 3]
+XXXXXXXXXXXXXXXX   Summary  XXXXXXXXXXXXXXXXXXXXX
+current size: 3 the total number of page fault: 21
+current size: 4 the total number of page fault: 16
+current size: 5 the total number of page fault: 16
+
+XXXXXXXXXXXXXXXX   Test     XXXXXXXXXXXXXXXXXXXXX
+Current algorithm for test: liu
+The reference string for test is:
+[3, 4, 6, 8, 7, 5, 1, 3, 1, 5, 6, 0, 4, 5, 2, 7, 4, 3, 2, 7, 0, 3, 3, 6, 3]
+XXXXXXXXXXXXXXXX   Summary  XXXXXXXXXXXXXXXXXXXXX
+current size: 3 the total number of page fault: 20
+current size: 4 the total number of page fault: 20
+current size: 5 the total number of page fault: 19
+ 
+
+
+(2)For generated page reference:
+[2 8 5 9 8 1 9 8 11 12 8 4]
+XXXXXXXXXXXXXXXX   Test     XXXXXXXXXXXXXXXXXXXXX
+Current algorithm for test: fifo
+The reference string for test is:
+[2, 8, 5, 9, 8, 1, 9, 8, 11, 12, 8, 4]
+XXXXXXXXXXXXXXXX   Summary  XXXXXXXXXXXXXXXXXXXXX
+current size: 3 the total number of page fault: 9
+current size: 4 the total number of page fault: 9
+current size: 5 the total number of page fault: 9
+
+XXXXXXXXXXXXXXXX   Test     XXXXXXXXXXXXXXXXXXXXX
+Current algorithm for test: lru
+The reference string for test is:
+[2, 8, 5, 9, 8, 1, 9, 8, 11, 12, 8, 4]
+XXXXXXXXXXXXXXXX   Summary  XXXXXXXXXXXXXXXXXXXXX
+current size: 3 the total number of page fault: 8
+current size: 4 the total number of page fault: 8
+current size: 5 the total number of page fault: 8
+
+XXXXXXXXXXXXXXXX   Test     XXXXXXXXXXXXXXXXXXXXX
+Current algorithm for test: liu
+The reference string for test is:
+[2, 8, 5, 9, 8, 1, 9, 8, 11, 12, 8, 4]
+XXXXXXXXXXXXXXXX   Summary  XXXXXXXXXXXXXXXXXXXXX
+current size: 3 the total number of page fault: 8
+current size: 4 the total number of page fault: 8
+current size: 5 the total number of page fault: 8
+
+
+(3)For generated page reference:
+[1 4 3 3 4 3 0 1 6 8 11 4]
+
+XXXXXXXXXXXXXXXX   Test     XXXXXXXXXXXXXXXXXXXXX
+Current algorithm for test: fifo
+The reference string for test is:
+[1, 4, 3, 3, 4, 3, 0, 1, 6, 8, 11, 4]
+XXXXXXXXXXXXXXXX   Summary  XXXXXXXXXXXXXXXXXXXXX
+current size: 3 the total number of page fault: 9
+current size: 4 the total number of page fault: 8
+current size: 5 the total number of page fault: 8
+
+XXXXXXXXXXXXXXXX   Test     XXXXXXXXXXXXXXXXXXXXX
+Current algorithm for test: lru
+The reference string for test is:
+[1, 4, 3, 3, 4, 3, 0, 1, 6, 8, 11, 4]
+XXXXXXXXXXXXXXXX   Summary  XXXXXXXXXXXXXXXXXXXXX
+current size: 3 the total number of page fault: 9
+current size: 4 the total number of page fault: 8
+current size: 5 the total number of page fault: 8
+
+XXXXXXXXXXXXXXXX   Test     XXXXXXXXXXXXXXXXXXXXX
+Current algorithm for test: liu
+The reference string for test is:
+[1, 4, 3, 3, 4, 3, 0, 1, 6, 8, 11, 4]
+XXXXXXXXXXXXXXXX   Summary  XXXXXXXXXXXXXXXXXXXXX
+current size: 3 the total number of page fault: 8
+current size: 4 the total number of page fault: 7
+current size: 5 the total number of page fault: 7
+
+Discussion:
+Compared with the FIFO and LRU, the LRU should be better. Because LRU creates less page fault than other two algrithms.FIFO is simple to be implemented the replacement algrithm but is not very effective. Because FIFO can get more page fault than other algrithms. LRU is difficult to implement but it will spend less time to replace the page. 
